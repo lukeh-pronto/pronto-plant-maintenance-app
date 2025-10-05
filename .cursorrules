@@ -42,7 +42,7 @@
 - Keep functions small and focused
 - Avoid deep nesting
 
-## File Naming
+## File Naming 
 - Use PascalCase for component files (e.g., `Button.tsx`)
 - Use camelCase for utility files
 - Use descriptive names that indicate purpose
