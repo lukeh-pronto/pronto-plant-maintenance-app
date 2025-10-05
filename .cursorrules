@@ -1,0 +1,55 @@
+# Plant Maintenance App - Development Rules
+
+## Code Style & Standards
+- Use TypeScript for all new files and components
+- Use functional components with React hooks (no class components)
+- Use camelCase for variables and functions, PascalCase for components
+- Use meaningful, descriptive names for variables and functions
+- Always add proper TypeScript types and interfaces
+
+## Project Structure
+- Follow the existing folder structure:
+  - Components go in `src/components/`
+  - Screens go in `src/screens/`
+  - Constants go in `src/constants/`
+  - Assets go in `assets/`
+- Export components from `src/components/index.ts`
+- Export screens from `src/screens/index.ts`
+
+## React Native & Expo
+- Use React Native Paper components when available (Button, Card, etc.)
+- Use the established color constants from `src/constants/colors.ts`
+- Follow the existing theme structure in `src/constants/theme.ts`
+- Use Expo Camera for camera functionality
+- Use react-native-vector-icons for icons
+
+## Component Guidelines
+- Create reusable components in `src/components/`
+- Use proper prop types with TypeScript interfaces
+- Follow the existing Button component pattern
+- Keep components focused and single-purpose
+
+## Screen Guidelines
+- Create screens in `src/screens/`
+- Use proper navigation patterns
+- Follow the existing HomeScreen and QRScannerScreen patterns
+- Handle loading states and error states appropriately
+
+## Code Quality
+- Add error handling to API calls and async operations
+- Use proper state management (useState, useEffect)
+- Add comments for complex logic
+- Keep functions small and focused
+- Avoid deep nesting
+
+## File Naming
+- Use PascalCase for component files (e.g., `Button.tsx`)
+- Use camelCase for utility files
+- Use descriptive names that indicate purpose
+
+## Figma Design Implementation
+- When a Figma link is provided, follow the design exactly
+- Use the Figma MCP tools to extract design specifications
+- Match colors, spacing, typography, and layout precisely
+- Implement components to match the visual design pixel-perfectly
+- Use the design system variables and tokens from Figma when available
