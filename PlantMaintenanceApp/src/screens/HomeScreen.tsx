@@ -809,23 +809,13 @@ const HomeScreen = () => {
             
             {/* Header */}
             <View style={styles.queueHeader}>
+              <View style={styles.queueHeaderSpacer} />
               <TouchableOpacity 
                 style={styles.queueCloseButton}
                 onPress={() => setShowQueueViewer(false)}
               >
                 <MaterialIcons name="close" size={24} color="#242424" />
               </TouchableOpacity>
-              <View style={styles.queueHeaderRight}>
-                <TouchableOpacity 
-                  style={styles.queueStatusButton}
-                  onPress={() => setShowQueueViewer(false)}
-                  activeOpacity={0.7}
-                >
-                  <Text style={[styles.queueOnlineStatus, isOfflineMode && styles.queueOfflineStatus]}>
-                    {isOfflineMode ? 'Offline' : 'Online'}
-                  </Text>
-                </TouchableOpacity>
-              </View>
             </View>
 
             {/* Queue Items */}
@@ -953,6 +943,7 @@ const HomeScreen = () => {
         <View style={styles.fullPageMenuContainer}>
           {/* Header with close button */}
           <View style={styles.fullPageMenuHeader}>
+            <View style={styles.fullPageMenuHeaderSpacer} />
             <TouchableOpacity 
               style={styles.fullPageMenuClose}
               onPress={() => {
@@ -1529,9 +1520,12 @@ const styles = StyleSheet.create({
     height: 100,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     paddingHorizontal: 10,
     paddingTop: 50,
+  },
+  fullPageMenuHeaderSpacer: {
+    flex: 1,
   },
   fullPageMenuClose: {
     alignItems: 'center',
@@ -1598,9 +1592,12 @@ const styles = StyleSheet.create({
         height: 100,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         paddingHorizontal: 10,
         paddingTop: 50,
+      },
+      queueHeaderSpacer: {
+        flex: 1,
       },
       queueCloseButton: {
         alignItems: 'center',
@@ -1608,29 +1605,6 @@ const styles = StyleSheet.create({
         width: 44,
         height: 44,
         borderRadius: 22,
-      },
-      queueHeaderRight: {
-        flex: 1,
-        alignItems: 'flex-end',
-        justifyContent: 'center',
-      },
-      queueStatusButton: {
-        paddingHorizontal: 12,
-        paddingVertical: 6,
-        borderRadius: 4,
-        backgroundColor: '#f5f5f5',
-        borderWidth: 1,
-        borderColor: '#e0e0e0',
-      },
-      queueOnlineStatus: {
-        fontFamily: 'Roboto',
-        fontSize: 11,
-        fontWeight: '400',
-        color: '#14662c',
-        letterSpacing: 0.25,
-      },
-      queueOfflineStatus: {
-        color: '#d32f2f',
       },
       queueContent: {
         flex: 1,

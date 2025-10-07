@@ -50,6 +50,7 @@ const PreStartChecklistScreen: React.FC<PreStartChecklistScreenProps> = ({ onBac
     { id: '3', title: t.lightsIndicators, status: 'pending', workRequestStatus: 'idle' },
     { id: '4', title: t.brakeSystem, status: 'pending', workRequestStatus: 'idle' },
   ]);
+
   const [showSnackbar, setShowSnackbar] = useState(false);
   const [showPhotoBottomSheet, setShowPhotoBottomSheet] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
@@ -90,6 +91,7 @@ const PreStartChecklistScreen: React.FC<PreStartChecklistScreenProps> = ({ onBac
       )
     );
   };
+
 
   const handleAddPhoto = (itemId: string) => {
     setSelectedItemId(itemId);
@@ -274,6 +276,7 @@ const PreStartChecklistScreen: React.FC<PreStartChecklistScreenProps> = ({ onBac
       setTimeout(() => setShowSnackbar(false), 3000);
     }
   };
+
 
   const renderCheckItem = (item: CheckItem) => (
     <View key={item.id} style={styles.checkItem}>
@@ -1002,6 +1005,7 @@ const styles = StyleSheet.create({
     color: '#232323',
     lineHeight: 22,
   },
+
 });
 
 export default PreStartChecklistScreen;

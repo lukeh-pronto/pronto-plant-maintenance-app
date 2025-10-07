@@ -65,6 +65,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ visible, onClose })
       <View style={styles.container}>
         {/* Header with close button */}
         <View style={styles.header}>
+          <View style={styles.headerSpacer} />
           <TouchableOpacity 
             onPress={onClose} 
             style={styles.closeButton}
@@ -99,9 +100,12 @@ const styles = StyleSheet.create({
     height: 100,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
     paddingHorizontal: 10,
     paddingTop: 50,
+  },
+  headerSpacer: {
+    flex: 1,
   },
   closeButton: {
     alignItems: 'center',
